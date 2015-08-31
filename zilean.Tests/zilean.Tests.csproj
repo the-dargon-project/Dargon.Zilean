@@ -139,13 +139,9 @@
       <Project>{95B8824C-E08B-4552-AD80-3A79CFD7E254}</Project>
       <Name>Dargon.Zilean.Api</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dargon.Zilean.Client.Api\Dargon.Zilean.Client.Api.csproj">
+    <ProjectReference Include="..\Dargon.Zilean.Client.Impl\Dargon.Zilean.Client.Impl.csproj">
       <Project>{B48FF205-4BD7-4CB7-AA17-731012186596}</Project>
-      <Name>Dargon.Zilean.Client.Api</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Dargon.Zilean.Impl\Dargon.Zilean.Impl.csproj">
-      <Project>{EB5BA232-3A72-4997-9C42-DF6ED6EA8533}</Project>
-      <Name>Dargon.Zilean.Impl</Name>
+      <Name>Dargon.Zilean.Client.Impl</Name>
     </ProjectReference>
     <ProjectReference Include="..\zilean\zilean.csproj">
       <Project>{cd99c907-9575-42e4-9418-095144f0940b}</Project>

@@ -124,9 +124,9 @@
       <Project>{95B8824C-E08B-4552-AD80-3A79CFD7E254}</Project>
       <Name>Dargon.Zilean.Api</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dargon.Zilean.Impl\Dargon.Zilean.Impl.csproj">
+    <ProjectReference Include="..\Dargon.Zilean.Server.Impl\Dargon.Zilean.Server.Impl.csproj">
       <Project>{EB5BA232-3A72-4997-9C42-DF6ED6EA8533}</Project>
-      <Name>Dargon.Zilean.Impl</Name>
+      <Name>Dargon.Zilean.Server.Impl</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

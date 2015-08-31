@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Dargon.Zilean.Api")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Common Api for Dargon.Zilean")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Dargon.Zilean.Api")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCompany("The Dargon Project")]
+[assembly: AssemblyProduct("Dargon.Zilean")]
+[assembly: AssemblyCopyright("Copyright © Michael 'Warty' Yu 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

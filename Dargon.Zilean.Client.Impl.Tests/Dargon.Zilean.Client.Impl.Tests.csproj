@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C77CA04E-97CE-44E9-97AA-DF00224B4CFA}</ProjectGuid>
+    <ProjectGuid>{E25244AB-5A7D-4810-82D9-082613B11C20}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dargon.Zilean.Tests</RootNamespace>
-    <AssemblyName>Dargon.Zilean.Impl.Tests</AssemblyName>
+    <RootNamespace>Dargon.Zilean.Client.Tests</RootNamespace>
+    <AssemblyName>Dargon.Zilean.Client.Api.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -43,6 +43,10 @@
       <HintPath>..\packages\Dargon.Ryu.Api.0.0.4\lib\portable-net45+netcore45+MonoAndroid1+MonoTouch1\Dargon.Ryu.Api.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Dargon.SystemState.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dargon.SystemState.Api.0.1.1\lib\net45\Dargon.SystemState.Api.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ItzWarty.Commons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ItzWarty.Commons.0.5.1\lib\portable-net45+netcore45+MonoAndroid1+MonoTouch1\ItzWarty.Commons.dll</HintPath>
       <Private>True</Private>
@@ -66,26 +70,19 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="ChronokeeperServiceConfigurationTests.cs" />
-    <Compile Include="ChronokeeperServiceImplIT.cs" />
-    <Compile Include="ChronokeeperServiceImplTests.cs" />
-    <Compile Include="ChronokeeperServiceMobTests.cs" />
-    <Compile Include="ChronokeeperWorkerImplTests.cs" />
-    <Compile Include="ChronokeeperWorkerImplIT.cs" />
+    <Compile Include="RemoteChronokeeperConfigurationFactoryTests.cs" />
+    <Compile Include="RemoteChronokeeperConfigurationImplTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoteChronokeeperConfigurationMobTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dargon.Zilean.Api\Dargon.Zilean.Api.csproj">
-      <Project>{95B8824C-E08B-4552-AD80-3A79CFD7E254}</Project>
-      <Name>Dargon.Zilean.Api</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Dargon.Zilean.Impl\Dargon.Zilean.Impl.csproj">
-      <Project>{EB5BA232-3A72-4997-9C42-DF6ED6EA8533}</Project>
-      <Name>Dargon.Zilean.Impl</Name>
+    <ProjectReference Include="..\Dargon.Zilean.Client.Impl\Dargon.Zilean.Client.Impl.csproj">
+      <Project>{B48FF205-4BD7-4CB7-AA17-731012186596}</Project>
+      <Name>Dargon.Zilean.Client.Impl</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
