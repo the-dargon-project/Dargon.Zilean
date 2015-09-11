@@ -48,19 +48,19 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Dargon.Ryu.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dargon.Ryu.Api.0.0.4\lib\portable-net45+netcore45+MonoAndroid1+MonoTouch1\Dargon.Ryu.Api.dll</HintPath>
+      <HintPath>..\packages\Dargon.Ryu.Api.0.3.0\lib\portable-net45+netcore45+MonoAndroid1+MonoTouch1\Dargon.Ryu.Api.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Dargon.Ryu.Impl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dargon.Ryu.Impl.0.1.4\lib\net45\Dargon.Ryu.Impl.dll</HintPath>
+      <HintPath>..\packages\Dargon.Ryu.Impl.0.3.1\lib\net45\Dargon.Ryu.Impl.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Dargon.Services.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dargon.Services.Api.0.5.0\lib\net45\Dargon.Services.Api.dll</HintPath>
+      <HintPath>..\packages\Dargon.Services.Api.1.0.0\lib\net45\Dargon.Services.Api.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Dargon.Services.Impl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dargon.Services.Impl.0.5.1\lib\net45\Dargon.Services.Impl.dll</HintPath>
+      <HintPath>..\packages\Dargon.Services.Impl.1.0.0\lib\net45\Dargon.Services.Impl.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Dargon.Zilean.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -68,7 +68,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="ItzWarty.Commons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ItzWarty.Commons.0.5.1\lib\portable-net45+netcore45+MonoAndroid1+MonoTouch1\ItzWarty.Commons.dll</HintPath>
+      <HintPath>..\packages\ItzWarty.Commons.0.5.2\lib\portable-net45+netcore45+MonoAndroid1+MonoTouch1\ItzWarty.Commons.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ItzWarty.Proxies.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

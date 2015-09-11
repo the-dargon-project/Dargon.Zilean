@@ -21,14 +21,8 @@ namespace Dargon.Zilean.Client {
          var remoteChronokeeperConfiguration = ryu.Get<RemoteChronokeeperConfiguration>();
          var networkingProxy = ryu.Get<INetworkingProxy>();
          var endpoint = networkingProxy.CreateEndPoint(remoteChronokeeperConfiguration.Host, remoteChronokeeperConfiguration.Port);
-         var ipEndpoint = endpoint.ToIPEndPoint();
-         var clusteringConfiguration = new ClusteringConfiguration(
-            ipEndpoint.Address,
-            ipEndpoint.Port,
-            ClusteringRoleFlags.GuestOnly
-         );
-         var serviceClientFactory = ryu.Get<IServiceClientFactory>();
-         var serviceClient = serviceClientFactory.CreateOrJoin(clusteringConfiguration);
+         var serviceClientFactory = ryu.Get<ServiceClientFactory>();
+         var serviceClient = serviceClientFactory.Remote(endpoint.ToIPEndPoint());
          return serviceClient.GetService<ChronokeeperService>();
       }
    }

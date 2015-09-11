@@ -1,6 +1,8 @@
-﻿using Dargon.Nest.Egg;
+﻿using System.Net;
+using Dargon.Nest.Egg;
 using Dargon.Ryu;
 using Dargon.Services;
+using Dargon.Services.Clustering;
 using ItzWarty;
 using NLog;
 using NLog.Config;
@@ -44,8 +46,8 @@ namespace Dargon.Zilean {
          InitializeLogging();
 
          ryu = new RyuFactory().Create();
-         var clusteringConfiguration = new ClusteringConfiguration(kZileanServicePort, 1000);
-         ryu.Set<IClusteringConfiguration>(clusteringConfiguration);
+         var clusteringConfiguration = new ClusteringConfigurationImpl(IPAddress.Loopback, kZileanServicePort, ClusteringRole.HostOnly);
+         ryu.Set<ClusteringConfiguration>(clusteringConfiguration);
          ryu.Setup();
          ryu.Touch<ItzWartyProxiesRyuPackage>();
          ryu.Touch<ZileanImplRyuPackage>();
