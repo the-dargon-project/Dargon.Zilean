@@ -50,6 +50,7 @@ namespace Dargon.Zilean {
          ryu.Set<ClusteringConfiguration>(clusteringConfiguration);
          ryu.Setup();
          ryu.Touch<ItzWartyProxiesRyuPackage>();
+         ryu.Touch<ServicesRyuPackage>();
          ryu.Touch<ZileanImplRyuPackage>();
          return NestResult.Success;
       }

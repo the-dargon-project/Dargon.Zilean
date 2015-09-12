@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Dargon.Management.Server;
 using Dargon.Ryu;
+using Dargon.Services;
 using Dargon.Zilean.Client;
 using ItzWarty;
 using NMockito;
@@ -22,6 +23,7 @@ namespace Dargon.Zilean.Tests {
          clientRyu.Set(systemState);
          clientRyu.Set(managementServer);
          clientRyu.Touch<ItzWartyProxiesRyuPackage>();
+         clientRyu.Touch<ServicesRyuPackage>();
          clientRyu.Touch<ZileanClientApiRyuPackage>();
 
          var chronokeeper = clientRyu.Get<ChronokeeperService>();
