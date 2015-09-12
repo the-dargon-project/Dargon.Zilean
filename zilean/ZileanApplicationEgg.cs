@@ -27,7 +27,7 @@ namespace Dargon.Zilean {
          debuggerTarget = new AsyncTargetWrapper(debuggerTarget);
          consoleTarget = new AsyncTargetWrapper(consoleTarget);
 #else
-         AsyncTargetWrapper a; // Placeholder for optimizing imports
+         new AsyncTargetWrapper().Wrap(); // Placeholder for optimizing imports
 #endif
 
          config.AddTarget("debugger", debuggerTarget);

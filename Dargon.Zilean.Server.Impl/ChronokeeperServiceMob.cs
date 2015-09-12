@@ -14,5 +14,11 @@ namespace Dargon.Zilean {
 
       [ManagedOperation]
       public Guid GenerateSequentialGuid() => chronokeeperService.GenerateSequentialGuid();
+
+      [ManagedOperation]
+      public long[] GenerateSequentialIds(int count) => chronokeeperService.GenerateSequentialIds(count);
+
+      [ManagedOperation]
+      public Guid[] GenerateSequentialGuids(int count) => chronokeeperService.GenerateSequentialGuids(count);
    }
 }

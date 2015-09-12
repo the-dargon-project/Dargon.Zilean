@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
+using ItzWarty;
 
 namespace Dargon.Zilean {
    public class ChronokeeperServiceImpl : ChronokeeperService {
@@ -25,5 +26,9 @@ namespace Dargon.Zilean {
          var worker = workers[GetNextRoundRobinCounter() % workers.Length];
          return worker.GenerateSequentialGuid();
       }
+
+      public long[] GenerateSequentialIds(int count) => Util.Generate(count, i => GenerateSequentialId());
+
+      public Guid[] GenerateSequentialGuids(int count) => Util.Generate(count, i => GenerateSequentialGuid());
    }
 }

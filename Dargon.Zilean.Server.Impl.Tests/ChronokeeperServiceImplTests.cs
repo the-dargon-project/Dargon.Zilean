@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Configuration;
+using System.Linq;
 using NMockito;
 using Xunit;
 
@@ -24,16 +26,13 @@ namespace Dargon.Zilean.Tests {
       }
 
       [Fact]
-      public void GenerateUniqueId_DelegatesToWorkersRoundRobin_Test() {
+      public void GenerateUniqueIds_DelegatesToWorkersRoundRobin_Test() {
          When(workerA.GenerateSequentialId()).ThenReturn(100, 101);
          When(workerB.GenerateSequentialId()).ThenReturn(200, 201);
          When(workerC.GenerateSequentialId()).ThenReturn(300);
 
-         AssertEquals(100, testObj.GenerateSequentialId());
-         AssertEquals(200, testObj.GenerateSequentialId());
-         AssertEquals(300, testObj.GenerateSequentialId());
-         AssertEquals(101, testObj.GenerateSequentialId());
-         AssertEquals(201, testObj.GenerateSequentialId());
+         var result = testObj.GenerateSequentialIds(5);
+         AssertTrue(new long[] { 100, 200, 300, 101, 201 }.SequenceEqual(result));
 
          Verify(workerA, Times(2)).GenerateSequentialId();
          Verify(workerB, Times(2)).GenerateSequentialId();
@@ -42,7 +41,7 @@ namespace Dargon.Zilean.Tests {
       }
 
       [Fact]
-      public void GenerateUniqueGuid_DelegatesToWorkersRoundRobin_Test() {
+      public void GenerateUniqueGuids_DelegatesToWorkersRoundRobin_Test() {
          Guid guid1 = Guid.NewGuid(),
               guid2 = Guid.NewGuid(),
               guid3 = Guid.NewGuid(),
@@ -53,11 +52,8 @@ namespace Dargon.Zilean.Tests {
          When(workerB.GenerateSequentialGuid()).ThenReturn(guid2, guid5);
          When(workerC.GenerateSequentialGuid()).ThenReturn(guid3);
 
-         AssertEquals(guid1, testObj.GenerateSequentialGuid());
-         AssertEquals(guid2, testObj.GenerateSequentialGuid());
-         AssertEquals(guid3, testObj.GenerateSequentialGuid());
-         AssertEquals(guid4, testObj.GenerateSequentialGuid());
-         AssertEquals(guid5, testObj.GenerateSequentialGuid());
+         var result = testObj.GenerateSequentialGuids(5);
+         AssertTrue(new [] { guid1, guid2, guid3, guid4, guid5 }.SequenceEqual(result));
 
          Verify(workerA, Times(2)).GenerateSequentialGuid();
          Verify(workerB, Times(2)).GenerateSequentialGuid();
