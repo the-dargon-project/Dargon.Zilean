@@ -105,8 +105,8 @@
       <HintPath>..\packages\Nito.AsyncEx.3.0.0\lib\net45\Nito.AsyncEx.Enlightenment.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NLog, Version=3.2.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.3.2.0.0\lib\net45\NLog.dll</HintPath>
+    <Reference Include="NLog, Version=3.1.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.3.1.0.0\lib\net45\NLog.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NMockito, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -144,9 +144,9 @@
       <Project>{B48FF205-4BD7-4CB7-AA17-731012186596}</Project>
       <Name>Dargon.Zilean.Client.Impl</Name>
     </ProjectReference>
-    <ProjectReference Include="..\zilean\zilean.csproj">
-      <Project>{cd99c907-9575-42e4-9418-095144f0940b}</Project>
-      <Name>zilean</Name>
+    <ProjectReference Include="..\zileand\zileand.csproj">
+      <Project>{CD99C907-9575-42E4-9418-095144F0940B}</Project>
+      <Name>zileand</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
