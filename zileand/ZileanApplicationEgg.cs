@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using Dargon.Nest.Egg;
 using Dargon.Ryu;
 using Dargon.Services;
@@ -13,7 +14,8 @@ namespace Dargon.Zilean {
    public class ZileanApplicationEgg : INestApplicationEgg {
       private const int kZileanServicePort = 40001;
       private RyuContainer ryu;
-      
+      private IEggHost host;
+
       public static void InitializeLogging() {
          var config = new LoggingConfiguration();
          Target debuggerTarget = new DebuggerTarget() {
@@ -43,6 +45,8 @@ namespace Dargon.Zilean {
       }
 
       public NestResult Start(IEggParameters parameters) {
+         host = parameters.Host;
+
          InitializeLogging();
 
          ryu = new RyuFactory().Create();
@@ -56,6 +60,7 @@ namespace Dargon.Zilean {
       }
 
       public NestResult Shutdown() {
+         host.Shutdown();
          return NestResult.Success;
       }
    }
