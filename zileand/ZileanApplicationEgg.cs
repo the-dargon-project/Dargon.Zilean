@@ -45,7 +45,7 @@ namespace Dargon.Zilean {
       }
 
       public NestResult Start(IEggParameters parameters) {
-         host = parameters.Host;
+         host = parameters?.Host;
 
          InitializeLogging();
 
@@ -60,7 +60,7 @@ namespace Dargon.Zilean {
       }
 
       public NestResult Shutdown() {
-         host.Shutdown();
+         host?.Shutdown();
          return NestResult.Success;
       }
    }
